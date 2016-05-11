@@ -1,0 +1,23 @@
+{
+  "name": "CMS-BO-API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon server.js",
+    "db:create": "node tasks/createTable.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "helmet": "^2.0.0",
+    "sequelize": "^3.23.0",
+    "sqlite3": "^3.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
