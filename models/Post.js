@@ -10,7 +10,7 @@ const Post = sequelize.define('post', {
     validate: {
       min: 5,
       notEmpty: true,
-    }
+    },
   },
   description: {
     type: Sequelize.TEXT,
@@ -18,7 +18,7 @@ const Post = sequelize.define('post', {
     validate: {
       min: 50,
       notEmpty: true,
-    }
+    },
   },
   content: {
     type: Sequelize.TEXT,
@@ -26,10 +26,10 @@ const Post = sequelize.define('post', {
     validate: {
       min: 50,
       notEmpty: true,
-    }
+    },
   },
 }, {
-  freezeTableName: true // Model tableName will be the same as the model name
+  freezeTableName: true, // Model tableName will be the same as the model name
 });
 
 module.exports = Post;

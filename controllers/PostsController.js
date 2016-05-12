@@ -7,22 +7,21 @@ const index = {
     Post
       .findAll()
       .then(posts => {
-        res.send(posts);
-      })  
+        res.send({ posts });
+      });
   },
-  
+
   post(req, res) {
     const post = req.body.post;
-    console.log(req.body);
 
     Post
       .create(post)
-      .then(() => {
-        res.status(201).end();
+      .then(data => {
+        res.status(201).send({ post: data.dataValues });
       })
       .catch(err => {
-        res.status(400).send(err.errors);
-      }); 
+        res.status(400).send({ errors: err.errors });
+      });
   },
 };
 
