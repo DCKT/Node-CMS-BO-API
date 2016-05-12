@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon server.js",
-    "db:create": "node tasks/createTable.js"
+    "start": "node server.js",
+    "db:create": "node tasks/createTable.js",
+    "setup": "npm i && npm run db:create",
+    "server": "./node_modules/.bin/nodemon server.js"
   },
   "keywords": [],
   "author": "",
