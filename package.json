@@ -7,7 +7,8 @@
     "start": "node server.js",
     "db:create": "node tasks/createTable.js",
     "setup": "npm i && npm run db:create",
-    "server": "./node_modules/.bin/nodemon server.js"
+    "server": "./node_modules/.bin/nodemon server.js",
+    "test": "./nodemon/.bin/mocha"
   },
   "keywords": [],
   "author": "",
