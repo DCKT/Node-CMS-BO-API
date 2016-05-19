@@ -4,10 +4,16 @@ const Post = rootRequire('models/Post');
 
 const index = {
   get(req, res) {
+    const postPerPage = 5;
+    const currentPage = Number.isInteger(req.query.page) ? req.query.page : undefined;
+
     Post
-      .findAll()
+      .findAll({
+        offset: currentPage ? (currentPage - 1) * postPerPage : 0,
+        limit: postPerPage,
+      })
       .then(posts => {
-        res.send({ posts });
+        res.send({ posts, page: currentPage || 1 });
       });
   },
 

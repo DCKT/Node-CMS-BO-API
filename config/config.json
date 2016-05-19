@@ -1,0 +1,7 @@
+{
+  "config": {
+    "posts": {
+      "postPerPage": "5",
+    }
+  }
+}
